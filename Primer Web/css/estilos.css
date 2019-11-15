@@ -1,0 +1,270 @@
+/*reglas
+selectores: Manera de identificar uno o más elementos 
+
+declaraciones: Dentro de {} es una declaración compuestas de las ramas siguientes
+propiedades : se separan de los valores por :
+valores: Se separa por ; si no hay ; termina de recorrer las propiedades.
+*/
+/*header{
+    background: #000;
+}*/
+/*selector de etiqueta header - section - article- nav*/
+/*selector descendente body header div nav ol li a{}*/
+/*Selector de cLase .    .portafolio   .link*/
+/*Selector de id #    #portafolio   */
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+}/*Se utiliza la coma para separar los selectores y no buscar un selector dentro de otro(S)*/
+h1{
+    font-size: 40px; /*Tamaño de fuente */
+    line-height: 1.5; /* Salto de linea*/
+    font-weight: 400;
+    letter-spacing: -0.2px; /*Distancias entre letras, más fino por lo general es valor negativo*/
+    text-transform: uppercase; /*Me permite editar mayusculas o minusculas, o alternaciones*/
+    /*text-decoration: underline; *//*Me permite Subrayar el texto*/
+    color: white;
+    margin: 0px  /*top right bottom left;*/
+}
+h1 strong{
+    color: #026fff;
+}
+h2{
+    color: #026fff;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+   font-weight: bold;
+   font-size: 20px;
+   margin-bottom: 40px;
+}
+.hero{
+    height: 300px;
+   /* background-image: url('../images/hero.jpg');/*Con doble punto para salir de la carpeta del css y poder acceder a la carpeta de la imagen*/
+    background-color: #1b2127;
+    /*background-size: 500px 300px;/*width height */
+    /*ackground-repeat: no-repeat;/*Definiendo el width de hero me permite no repetir la imagen*/
+    background-position-x: right;
+    display: flex;
+    justify-content: space-between;
+}
+.hero_image{
+    object-fit: cover;
+}
+.portfolio{
+    background: #b8b5b5;/* #626262;*/
+    padding: 20PX;
+}
+.project{
+    
+    background: gray;
+    /*border-top:10px solid red;/*Tamaño tipo y stilo
+    border-right:10px solid blue;
+    border-left:10px solid yellow;
+    border-bottom:10px solid green;*/
+    border: 1px solid gray;
+    border-radius: 10px ;
+    /*border-color: orange;
+    border-width: 10px;
+    border-style: solid;
+    margin: 10px;*/
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.project_title{
+    font-size: 30px;
+    margin:0 0 10px 0;
+}
+.project_course{
+    margin: 10px 0;
+}
+.project_date,
+.project_url{
+    margin: 10px 0;
+}
+.project strong{
+    font-family: 'Fjalla One', sans-serif;
+}
+.project_details{
+    width: 500px;
+}
+.project_imageContainer{
+    display: flex;
+    width: 500px;
+}
+.project_image{
+    width: inherit;
+    display: inherit;
+}
+.header{
+    background-color: #1b2127;
+    color: white;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+ol,
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+figure{
+    margin: 0px;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+     align-items: center;
+     padding:0 5px ;
+}
+.menu{
+    height: inherit;
+}
+.header ol{
+    display: flex;
+    height: inherit;
+}
+.header ol li{
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+.container{
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    height: inherit;
+    /*border: solid 1px red;*/
+    width: 1200px;
+    margin: 0 auto;
+    flex-wrap: inherit;
+}
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    }
+.box{
+    width: 200px;
+    height: 200px;
+    margin: 2px;
+    border: 1px solid red; 
+    flex-shrink: 0;
+}
+.footer{
+    background-color:#1b2127 ;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.experience{
+    display: flex;
+    flex-wrap: wrap;
+}
+.event_list_title {
+    margin-left: 20px;
+    
+}
+
+.event {
+    border: 1px solid red;
+    margin: 10px;
+    width: 480px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgb(73, 159, 170) ;
+}
+.event_detail{
+    margin: 20px;
+    margin-top:-30px;
+    background-color: white;
+    position: relative;
+    padding: 20px 40px;
+    text-align: center;
+}
+.event_description{
+    text-align: left;
+} 
+.event_url{
+    color: #056fff;
+    border: solid 1px;
+    padding: 20px;
+    text-decoration: none;
+}
+.event img{
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+}
+.contac{
+    background-color: #056fff;
+    color: white;
+    height: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social{
+   /* border: 1px solid;*/
+}
+.social_link{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    /*border: turquoise solid 1px;*/
+    background-size: 50px 50px;
+    margin: 0 10px;
+}
+.social_link.twitter{
+    background-image: url('../images/twitter.svg');
+    
+}
+.social_link.facebook{
+    background-image: url('../images/facebook.svg');
+}   
+.social_link.github{
+    background-image: url('../images/github.svg');
+}
+.social_link.instagram{
+    background-image: url('../images/instagram.svg'); 
+}
+.form_email input{
+    border-color: gray;
+    border-radius: 5px;
+    border-style: solid;
+    padding: 10px 20px 10px 25px; 
+    background-image: url('../images/envelope.svg');
+    background-size: 15px 15px;
+    background-position-y:center ;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+}
+.form_email button{
+    display: block;
+    margin-top: 5px;
+    background: transparent;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+}
+.form_email h3{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.footer img{
+    vertical-align: middle ;
+}
